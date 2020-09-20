@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>CPG App</title>
+  </head>
+  <body>
+    <!-- <script type="text/javascript" src="/sw.js"></script> -->
+    <h1>Minha aplicação PWA</h1>
+    <div class="pwa_alert">
+      <button class="pwa_alert_btn">Adicionar App</button>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(() => {
+            console.log("service worker registered");
+          })
+          .catch(() => {
+            console.warn("service worker failed");
+          });
+      }
+
+      let myPrompt;
+      const pwaAlert = document.querySelector(".pwa_alert");
+      const btnPWA = document.querySelector(".pwa_alert_btn");
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+
+        myPrompt = e;
+
+        pwaAlert.style.display = "block";
+      });
+
+      btnPWA.addEventListener("click", () => {
+        pwaAlert.style.display = "none";
+        myPrompt.prompt();
+        myPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult === "accepted") {
+            console.log("Aceitou");
+          } else {
+            console.log("Cancelou");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
