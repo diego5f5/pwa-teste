@@ -1,0 +1,16 @@
+{
+  "name": "cpg-app",
+  "short_name": "cpg",
+  "theme_color": "#2a0044",
+  "background_color": "#2a0044",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/diperfil.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
