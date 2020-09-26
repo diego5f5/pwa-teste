@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/pwa-teste/manifest.json" />
+    <link href="/pwa-teste/styles.css" rel="stylesheet" />
+    <title>CPG App</title>
+  </head>
+  <body>
+    <div class="header-container">
+      BEM-VINDO
+    </div>
+
+    <div class="body-container">
+      <div class="welcome-container">
+        O App CPG (Calculadora para Placas de Gesso), permite calcular de
+        forma fácil e prática, a quantidade aproximada de placas/peças
+        de gesso que podem ser instaladas em uma determinada parede.
+        <br><br>
+        Os cálculos do App são realizados em metros, portanto, ao
+        digitar a altura de uma placa de 40 centímetros por exemplo, ela
+        deve ser descrita como "0.40".
+        <br><br>
+        Ao fim de cada cálculo realizado, há a possibilidade de
+        compartilhar estas informações, além de poder efetuar novos
+        cálculos!
+      </div>
+
+      <div onclick="goToPage()" class="color-button">
+        CONTINUAR
+      </div>
+    </div>
+
+    <!-- PWA Alert -->
+    <div class="pwa_alert">
+      <button class="pwa_alert_btn">Adicionar App</button>
+    </div>
+
+    <!-- Script -->
+    <script type="text/javascript" src="/pwa-teste/main.js"></script>
+    <script>
+      function goToPage() {
+        location.href = "/pwa-teste/pages/efetuarCalculo.html";
+      }
+    </script>
+  </body>
+</html>
