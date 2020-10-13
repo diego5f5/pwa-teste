@@ -1,6 +1,6 @@
-const cacheName = "v3";
+const cacheName = "v1";
 
-const resourcesToPrecache = ["/", "/index.html", "/styles.css", "/main.js"];
+const resourcesToPrecache = ["/pwa-teste/", "/pwa-teste/index.html", "/pwa-teste/styles.css", "/pwa-teste/main.js"];
 
 // const resourcesToPrecache = [];
 
