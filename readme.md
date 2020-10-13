@@ -7,29 +7,3 @@ A primeira tela do aplicativo, recebe o usuário e também explica a ele detalhe
 Na segunda tela é onde ocorre a coleta dos dados para enfim ser efetuado o cálculo, o usuário informa os dados da parede, o tipo ou formato da placa e os dados da mesma. 
 
 Por fim temos a tela de resultado onde é apresentado os valores dos cálculos de forma simples. Permite também usuário efetuar um novo cálculo.
-
-----
-
-A aplicação é original e não uma cópia da aplicação de um colega ou de uma aplicação já existente?
-Sim
-
-A aplicação tem pelo menos duas interfaces (telas ou páginas) independentes?
-Sim
-
-A aplicação armazena e usa de forma relevante dados complexos do usuário?
-Não
-
-A aplicação possui um manifesto para instalação no dispositivo do usuário?
-Sim
-
-A aplicação possui um service worker que permite o funcionamento off-line?
-Sim
-
-O código da minha aplicação possui comentários explicando cada operação?
-Não
-
-A aplicação está funcionando corretamente?
-Sim
-
-A aplicação está completa?
-Sim
