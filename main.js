@@ -136,7 +136,7 @@ function doCalculation() {
       })
     );
 
-    location.href = "pages/resultado.html";
+    location.href = "resultado.html";
   } catch (error) {
     window.alert(error);
   }
