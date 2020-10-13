@@ -1,19 +1,19 @@
 {
   "short_name": "Cpg App",
   "name": "Calculadora para Placas de Gesso",
-  "theme_color": "#2a0044",
-  "background_color": "#2a0044",
+  "theme_color": " #5f67ec",
+  "background_color": " #5f67ec",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "/pwa-teste/",
+  "start_url": "/",
   "icons": [
     {
-      "src": "/pwa-teste/images/diperfil512.png",
+      "src": "/images/logo512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/pwa-teste/images/diperfil.png",
+      "src": "/images/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }

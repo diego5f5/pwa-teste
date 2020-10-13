@@ -3,11 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/pwa-teste/manifest.json" />
-    <link href="/pwa-teste/styles.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <title>CPG App</title>
   </head>
-  <body>
-    <h1>Página de cálculo</h1>
+  <body onload="changeInputs('Quadrado')">
+    <div class="header-container">EFETUAR CÁLCULO</div>
+
+    <div class="body-container">
+      <div class="parede-containter">
+        <h3 class="section-title">Dados da parede:</h3>
+
+        <div class="inputs-container">
+          <div class="intern-input-container">
+            <label class="input-label" for="altura-parede">Altura:</label><br />
+            <input
+              placeholder="Ex:3.20"
+              class="input"
+              type="number"
+              name="altura-parede"
+              id="altura-parede"
+            />
+          </div>
+
+          <div class="intern-input-container">
+            <label class="input-label" for="largura-parede">Largura:</label
+            ><br />
+            <input
+              placeholder="Ex:3.20"
+              class="input"
+              type="number"
+              name="largura-parede"
+              id="largura-parede"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="formatos-containter">
+        <h3 class="section-title">Formatos de placa:</h3>
+
+        <div class="shapes-container">
+          <label class="container">
+            <input
+              onchange="onChangeShape()"
+              type="radio"
+              checked="checked"
+              name="radio"
+              value="Quadrado"
+            />
+            <span class="checkmark"
+              ><img class="img-shape" src="/images/quadrado.png" alt="Quadrado"
+            /></span>
+          </label>
+
+          <label class="container">
+            <input
+              onchange="onChangeShape()"
+              type="radio"
+              name="radio"
+              value="Retângulo"
+            />
+            <span class="checkmark"
+              ><img
+                class="img-shape"
+                src="/images/retangulo.png"
+                alt="Retângulo"
+            /></span>
+          </label>
+
+          <label class="container">
+            <input
+              onchange="onChangeShape()"
+              type="radio"
+              name="radio"
+              value="Triângulo"
+            />
+            <span class="checkmark"
+              ><img
+                class="img-shape"
+                src="/images/triangulo.png"
+                alt="Triângulo"
+            /></span>
+          </label>
+
+          <label class="container">
+            <input
+              onchange="onChangeShape()"
+              type="radio"
+              name="radio"
+              value="Hexágono"
+            />
+            <span class="checkmark"
+              ><img class="img-shape" src="/images/hexagono.png" alt="Hexágono"
+            /></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- QUADRADO -->
+
+      <div class="placa-containter" id="quadrado">
+        <h3 class="section-title">Dados da placa:</h3>
+
+        <div class="inputs-container">
+          <div class="intern-input-container">
+            <label class="input-label" for="altura-placa"
+              >Altura / Largura:</label
+            ><br />
+            <input
+              placeholder="Ex:0.45"
+              class="input"
+              type="number"
+              name="altura-placa"
+              id="altura-placa"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- RETANGULO -->
+
+      <div class="placa-containter" id="retangulo">
+        <h3 class="section-title">Dados da placa:</h3>
+
+        <div class="inputs-container">
+          <div class="intern-input-container">
+            <label class="input-label" for="altura-placa">Altura:</label><br />
+            <input
+              placeholder="Ex:0.45"
+              class="input"
+              type="number"
+              name="altura-placa"
+              id="altura-placa"
+            />
+          </div>
+
+          <div class="intern-input-container">
+            <label class="input-label" for="largura-placa">Largura:</label
+            ><br />
+            <input
+              placeholder="Ex:0.45"
+              class="input"
+              type="number"
+              name="largura-placa"
+              id="largura-placa"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- TRIANGULO -->
+
+      <div class="placa-containter" id="triangulo">
+        <h3 class="section-title">Dados da placa:</h3>
+
+        <div class="inputs-container">
+          <div class="intern-input-container">
+            <label class="input-label" for="lado-placa"
+              >Um dos lados (x3):</label
+            ><br />
+            <input
+              placeholder="Ex:0.45"
+              class="input"
+              type="number"
+              name="lado-placa"
+              id="lado-placa"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- HEXAGONO -->
+
+      <div class="placa-containter" id="hexagono">
+        <h3 class="section-title">Dados da placa:</h3>
+
+        <div class="inputs-container">
+          <div class="intern-input-container">
+            <label class="input-label" for="lado-placa"
+              >Um dos lados (x6):</label
+            ><br />
+            <input
+              placeholder="Ex:0.45"
+              class="input"
+              type="number"
+              name="lado-placa"
+              id="lado-placa"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div onclick="doCalculation()" class="color-button">CALCULAR</div>
+    </div>
+
+    <!-- Script -->
+    <script type="text/javascript" src="/main.js"></script>
   </body>
 </html>

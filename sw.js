@@ -1,6 +1,8 @@
 const cacheName = "v3";
 
-const resourcesToPrecache = ["/pwa-teste", "/pwa-teste/index.html", "/pwa-teste/styles.css"];
+const resourcesToPrecache = ["/", "/index.html", "/styles.css", "/main.js"];
+
+// const resourcesToPrecache = [];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <title>CPG App</title>
+  </head>
+  <body onload="setResultValues()">
+    <div class="header-container">RESULTADO</div>
+
+    <div class="body-container">
+      <div class="welcome-container">
+        <div>
+          <p class="result-title">Parede:</p>
+          <div class="container-result">
+            <p>Altura:&nbsp;</p>
+            <p class="result-value" id="paredeAltura"></p>
+          </div>
+          <div class="container-result">
+            <p>Largura:&nbsp;</p>
+            <p class="result-value" id="paredeLargura"></p>
+          </div>
+
+          <div class="divisor"></div>
+
+          <p class="result-title">Placa:</p>
+          <div class="container-result">
+            <p>Tipo:&nbsp;</p>
+            <p class="result-value" id="tipoPlaca"></p>
+          </div>
+          <div class="container-result">
+            <p>Altura:&nbsp;</p>
+            <p class="result-value" id="placaAltura"></p>
+          </div>
+          <div class="container-result">
+            <p>Largura:&nbsp;</p>
+            <p class="result-value" id="placaLargura"></p>
+          </div>
+          <div class="container-result">
+            <p>Lado:&nbsp;</p>
+            <p class="result-value" id="placaLado"></p>
+          </div>
+
+          <div class="divisor"></div>
+
+          <div class="container-result">
+            <p>Placas necessárias ≅&nbsp;</p>
+            <p class="result-value" id="resultPlacas"></p>
+          </div>
+          <p class="plaster-result"></p>
+        </div>
+      </div>
+
+      <div onclick="goToPage()" class="color-button">NOVO CÁLCULO</div>
+    </div>
+
+    <!-- Script -->
+    <script type="text/javascript" src="/main.js"></script>
+    <script>
+      function goToPage() {
+        location.href = "/pages/efetuarCalculo.html";
+      }
+    </script>
+  </body>
+</html>
