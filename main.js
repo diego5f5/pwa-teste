@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("pwa-teste/sw.js")
+    .register("/pwa-teste/sw.js")
     .then(() => {
       console.log("service worker registered");
     })
@@ -136,7 +136,7 @@ function doCalculation() {
       })
     );
 
-    location.href = "pwa-teste/pages/resultado.html";
+    location.href = "/resultado.html";
   } catch (error) {
     window.alert(error);
   }
